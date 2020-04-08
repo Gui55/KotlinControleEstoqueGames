@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -49,4 +51,12 @@ dependencies {
     //Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.+'
     implementation 'com.squareup.retrofit2:converter-gson:2.+'
+
+    //Koin
+    implementation 'org.koin:koin-android:2.+'
+    implementation 'org.koin:koin-androidx-viewmodel:2.+'
+
+    //Dagger2
+    implementation 'com.google.dagger:dagger:2.+'
+    kapt 'com.google.dagger:dagger-compiler:2.+'
 }
