@@ -1,5 +1,6 @@
-package com.example.controleestoque
+package com.example.controleestoque.services.webservices
 
+import com.example.controleestoque.services.model.Game
 import retrofit2.Call
 import retrofit2.http.GET
 

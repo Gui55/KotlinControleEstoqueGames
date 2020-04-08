@@ -59,4 +59,12 @@ dependencies {
     //Dagger2
     implementation 'com.google.dagger:dagger:2.+'
     kapt 'com.google.dagger:dagger-compiler:2.+'
+
+    //ViewModelProviders
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.+"
+
+    //LiveData
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.+'
+    annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.+'
+    testImplementation 'androidx.arch.core:core-testing:2.+'
 }

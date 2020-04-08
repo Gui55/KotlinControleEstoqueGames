@@ -1,20 +1,19 @@
 package com.example.controleestoque.dagger
 
-import com.example.controleestoque.Requisition
+import android.app.Activity
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelStoreOwner
+import com.example.controleestoque.viewmodel.MAViewModel
 import dagger.Module
 import dagger.Provides
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 @Module
-class MAModule {
+class MAModule(var viewModelStoreOwner: ViewModelStoreOwner) {
 
     @Provides
-    fun provideRetrofitRequisition() : Requisition {
-        return Retrofit.Builder().baseUrl("https://5e878423781e48001676bce6.mockapi.io/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-            .create(Requisition::class.java)
+    fun provideVM() : MAViewModel {
+        return ViewModelProvider(viewModelStoreOwner)[MAViewModel::class.java]
     }
 
 }

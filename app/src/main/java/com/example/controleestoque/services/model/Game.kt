@@ -1,4 +1,4 @@
-package com.example.controleestoque
+package com.example.controleestoque.services.model
 
 data class Game(val id: Int,
                 val name: String,
